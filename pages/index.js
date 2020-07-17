@@ -1,7 +1,6 @@
 import React from 'react';
 import Stats from '../components/Stats';
 import CountrySelector from '../components/CountrySelector';
-import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -81,40 +80,6 @@ export default function IndexPage() {
   let dateNow = date.toLocaleDateString('sr-RS');
   return (
     <div>
-      <Head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-164601575-3
-          "
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-164601575-3
-            ');
-        `,
-          }}
-        />
-        <title>КОРОНА ВИРУС - COVID 19 статистика</title>
-        <meta
-          property="og:title"
-          content="КОРОНА ВИРУС (COVID 19) статистика по земљама"
-          key="title"
-        />
-        <meta
-          name="description"
-          content="статистика по земљама о корона вирусу COVID 19"
-        />
-        <meta
-          name="keywords"
-          content="Corona, COVID 19, Корона, вирус, самоубиство"
-        />
-        <meta name="author" content="Stefan Ljiljak" />
-      </Head>
       <GlobalStyle />
       <header>
         <h1>КОРОНА ВИРУС (COVID 19)</h1>
