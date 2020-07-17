@@ -4,7 +4,9 @@
   "description": "svakog dana u svakom pogledu sve vise napredujem :)",
   "main": "index.js",
   "scripts": {
-    "start": "next"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "keywords": [],
   "author": "Stefan Ljiljak",
