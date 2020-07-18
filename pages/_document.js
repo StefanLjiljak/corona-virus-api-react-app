@@ -26,21 +26,6 @@ class MyDocument extends Document {
               `,
             }}
           ></script>
-          <title>КОРОНА ВИРУС - COVID 19 статистика</title>
-          <meta
-            property="og:title"
-            content="КОРОНА ВИРУС (COVID 19) статистика по земљама"
-            key="title"
-          />
-          <meta
-            name="description"
-            content="статистика по земљама о корона вирусу COVID 19"
-          />
-          <meta
-            name="keywords"
-            content="Corona, COVID 19, Корона, вирус, самоубиство"
-          />
-          <meta name="author" content="Stefan Ljiljak" />
         </Head>
         <body>
           <Main />

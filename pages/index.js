@@ -2,6 +2,8 @@ import React from 'react';
 import Stats from '../components/Stats';
 import CountrySelector from '../components/CountrySelector';
 import { createGlobalStyle } from 'styled-components';
+import { DefaultSeo } from 'next-seo';
+import SEO from '../next-seo.config';
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -79,7 +81,8 @@ export default function IndexPage() {
   let yearNow = date.getFullYear();
   let dateNow = date.toLocaleDateString('sr-RS');
   return (
-    <div>
+    <>
+      <DefaultSeo {...SEO} />
       <GlobalStyle />
       <header>
         <h1>КОРОНА ВИРУС (COVID 19)</h1>
@@ -102,6 +105,6 @@ export default function IndexPage() {
       <footer>
         Copyright &copy; <span>{yearNow}</span>, Stefan Ljiljak
       </footer>
-    </div>
+    </>
   );
 }
