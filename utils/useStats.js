@@ -7,7 +7,7 @@ const useStats = (url) => {
     const fetchData = async () => {
       const data = await fetch(url)
         .then((res) => res.json())
-        .catch((err) => console.log(err));
+        .catch((err) => console.error(err));
       setStats(data);
     };
     fetchData();

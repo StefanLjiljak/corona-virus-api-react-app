@@ -34,15 +34,27 @@ const Stats = ({ url }) => {
     <StatGrid>
       <StatBlock>
         <h3>Заражених:</h3>
-        <span>{stats.confirmed.value}</span>
+        <span>
+          {!stats.error
+            ? stats.confirmed.value
+            : 'Грешка у куцању назива земље, покушајте поново.'}
+        </span>
       </StatBlock>
       <StatBlock>
         <h3>Умрлих:</h3>
-        <span>{stats.deaths.value}</span>
+        <span>
+          {!stats.error
+            ? stats.deaths.value
+            : 'Грешка у куцању назива земље, покушајте поново.'}
+        </span>
       </StatBlock>
       <StatBlock>
         <h3>Излечених:</h3>
-        <span>{stats.recovered.value}</span>
+        <span>
+          {!stats.error
+            ? stats.recovered.value
+            : 'Грешка у куцању назива земље, покушајте поново.'}
+        </span>
       </StatBlock>
     </StatGrid>
   );

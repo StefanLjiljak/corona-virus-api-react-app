@@ -16,7 +16,22 @@ const CountrySelector = () => {
       </section>
       <section>
         <label>Изаберите жељену земљу за приказ: </label>
-        <select
+        <input
+          list="countries"
+          onKeyUp={(e) => {
+            if (e.keyCode === 13 && e.target.value !== '') {
+              setSelectedCountry(e.target.value ? e.target.value : 'Serbia');
+            }
+          }}
+        />
+        <datalist id="countries">
+          {Object.entries(countries.countries).map(([code, country]) => (
+            <option key={code} value={country.name}>
+              {country.name}
+            </option>
+          ))}
+        </datalist>
+        {/* <select
           onChange={(e) => setSelectedCountry(e.target.value)}
           defaultValue="Serbia"
         >
@@ -25,7 +40,7 @@ const CountrySelector = () => {
               {country.name}
             </option>
           ))}
-        </select>
+        </select> */}
       </section>
       <Stats
         url={`https://covid19.mathdro.id/api/countries/${selectedCountry}`}
